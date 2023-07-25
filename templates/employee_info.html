@@ -1,0 +1,33 @@
+<!-- get_employee_data.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information</title>
+</head>
+<body>
+    <h1>Employee Information</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Location</th>
+            <th>Salary</th>
+            <th>Email</th>
+            <th>Profile Image</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }} </td> <!-- Assuming employee[1] holds the first name -->
+            <td>{{ employee.firstName }} </td> <!-- Assuming employee[1] holds the first name -->
+            <td>{{ employee.lastName }}</td> <!-- Assuming employee[2] holds the last name -->
+            <td>{{ employee.location }}</td> <!-- Assuming employee[3] holds the location -->
+            <td>{{ employee.salary }}</td> <!-- Assuming employee[4] holds the salary -->
+            <td>{{ employee.email }}</td> <!-- Assuming employee[5] holds the email -->
+            <td><img src="{{ employee.profileImage }}" alt="Profile Image" width="100" height="100"></td> <!-- Assuming employee[6] holds the S3 URL of the profile image -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

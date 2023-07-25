@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Application</title>
+    <link rel="stylesheet" href="static/style.css">
+    <div class="topnav">
+        <a class="index" href="index.html">Main Page</a>
+        <a href="http://my-practice-bucket-capstone.s3-website-us-east-1.amazonaws.com/">About US</a>
+        <a href="employeeInfo.html">Get Employee Info</a>
+        <title> Welcome to Entel Employee Profile Form </title>
+        <link rel="stylesheet" href="static/style.css">
+    </div>
+</head>
+<body>
+
+    
+    <a href="/employee"><button>Employees</button></a>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <h3>Employee Information</h3>
+        <label for="firstname">FirstName:</label>
+        <input id="firstname" name="firstname" type="text" required><br>
+
+        <label for="lastname">LastName:</label>
+        <input id="lastname" name="lastname" type="text" required><br>
+
+        <label for="location">Location:</label>
+        <input id="location" name="location" type="text" required><br>
+
+        <label for="salary">Salary:</label>
+        <input id="salary" name="salary" type="number" required><br>
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="text" required><br>
+
+        <label for="profileImage">Image:</label>
+        <input type="file" id="profileImage" name="profileImage" accept="image/*" required><br>
+
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</body>
+</html>
